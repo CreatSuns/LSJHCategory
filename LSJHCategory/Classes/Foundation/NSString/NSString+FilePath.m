@@ -1,6 +1,5 @@
 //
 //  NSString+FilePath.m
-//  WYAiOSEnv
 //
 //  Created by 李俊恒 on 2018/7/9.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -12,45 +11,45 @@
 
 @implementation NSString (FilePath)
 
-+ (NSString *)wya_homePath
++ (NSString *)ll_homePath
 {
     return NSHomeDirectory();
 }
 
-+ (NSString *)wya_appPath
++ (NSString *)ll_appPath
 {
     NSArray * paths =
     NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, YES);
-    return [paths wya_safeObjectAtIndex:0];
+    return [paths ll_safeObjectAtIndex:0];
 }
 
-+ (NSString *)wya_docPath
++ (NSString *)ll_docPath
 {
     NSArray * paths =
     NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    return [paths wya_safeObjectAtIndex:0];
+    return [paths ll_safeObjectAtIndex:0];
 }
 
-+ (NSString *)wya_libPrefPath
++ (NSString *)ll_libPrefPath
 {
     NSArray * paths =
     NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    return [[paths wya_safeObjectAtIndex:0] stringByAppendingFormat:@"/Preferences"];
+    return [[paths ll_safeObjectAtIndex:0] stringByAppendingFormat:@"/Preferences"];
 }
 
-+ (NSString *)wya_libCachePath
++ (NSString *)ll_libCachePath
 {
     NSArray * paths =
     NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    return [[paths wya_safeObjectAtIndex:0] stringByAppendingFormat:@"/Caches"];
+    return [[paths ll_safeObjectAtIndex:0] stringByAppendingFormat:@"/Caches"];
 }
 
-+ (NSString *)wya_tmpPath
++ (NSString *)ll_tmpPath
 {
     return [NSHomeDirectory() stringByAppendingFormat:@"/tmp"];
 }
 
-+ (BOOL)wya_IsDirectory:(NSString *)filePath
++ (BOOL)ll_IsDirectory:(NSString *)filePath
 {
     BOOL isDirectory = NO;
     [[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];

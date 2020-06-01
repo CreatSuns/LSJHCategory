@@ -11,7 +11,7 @@
 
 @implementation NSArray (Sudoku)
 
-- (MAS_VIEW *)wya_star_commonSuperviewOfViews
+- (MAS_VIEW *)star_commonSuperviewOfViews
 {
     if (self.count == 1) {
         return ((MAS_VIEW *)self.firstObject).superview;
@@ -36,7 +36,7 @@
     return commonSuperview;
 }
 
-- (void)wya_mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
+- (void)mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
                                         fixedItemHeight:(CGFloat)fixedItemHeight
                                               warpCount:(NSInteger)warpCount
                                              topSpacing:(CGFloat)topSpacing
@@ -53,7 +53,7 @@
         return;
     }
 
-    MAS_VIEW * tempSuperView = [self wya_star_commonSuperviewOfViews];
+    MAS_VIEW * tempSuperView = [self star_commonSuperviewOfViews];
 
     NSInteger rowCount =
     self.count % warpCount == 0 ? self.count / warpCount : self.count / warpCount + 1;
@@ -112,7 +112,7 @@
     }
 }
 
-- (void)wya_mas_distributeSudokuViewsWithFixedLineSpacing:(CGFloat)fixedLineSpacing
+- (void)mas_distributeSudokuViewsWithFixedLineSpacing:(CGFloat)fixedLineSpacing
                                     fixedInteritemSpacing:(CGFloat)fixedInteritemSpacing
                                                 warpCount:(NSInteger)warpCount
                                                topSpacing:(CGFloat)topSpacing
@@ -120,7 +120,7 @@
                                               leadSpacing:(CGFloat)leadSpacing
                                               tailSpacing:(CGFloat)tailSpacing
 {
-    [self wya_mas_distributeSudokuViewsWithFixedItemWidth:0
+    [self mas_distributeSudokuViewsWithFixedItemWidth:0
                                           fixedItemHeight:0
                                          fixedLineSpacing:fixedLineSpacing
                                     fixedInteritemSpacing:fixedInteritemSpacing
@@ -131,7 +131,7 @@
                                               tailSpacing:tailSpacing];
 }
 
-- (NSArray *)wya_mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
+- (NSArray *)mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
                                              fixedItemHeight:(CGFloat)fixedItemHeight
                                             fixedLineSpacing:(CGFloat)fixedLineSpacing
                                        fixedInteritemSpacing:(CGFloat)fixedInteritemSpacing
@@ -149,7 +149,7 @@
         return self.copy;
     }
 
-    MAS_VIEW * tempSuperView = [self wya_star_commonSuperviewOfViews];
+    MAS_VIEW * tempSuperView = [self star_commonSuperviewOfViews];
 
     NSArray * tempViews = self.copy;
     if (warpCount > self.count) {
@@ -226,8 +226,7 @@
     return tempViews;
 }
 
-- (NSArray *)
-wya_mas_distributeSpecialSudokuViewsWithFixedItemWidths:(NSArray<NSNumber *> *)fixedItemWidths
+- (NSArray *)mas_distributeSpecialSudokuViewsWithFixedItemWidths:(NSArray<NSNumber *> *)fixedItemWidths
                                        fixedItemHeights:(NSArray<NSNumber *> *)fixedItemHeights
                                        fixedLineSpacing:(CGFloat)fixedLineSpacing
                                   fixedInteritemSpacing:(CGFloat)fixedInteritemSpacing
@@ -247,7 +246,7 @@ wya_mas_distributeSpecialSudokuViewsWithFixedItemWidths:(NSArray<NSNumber *> *)f
     if (warpCount > self.count) {
         NSAssert(false, @"warp count不能大于数据长度");
     }
-    MAS_VIEW * tempSuperView = [self wya_star_commonSuperviewOfViews];
+    MAS_VIEW * tempSuperView = [self star_commonSuperviewOfViews];
 
     NSArray * tempViews = self.copy;
 

@@ -1,6 +1,5 @@
 //
 //  UIView+Gestures.m
-//  WYAKit
 //
 //  Created by 李世航 on 2018/12/11.
 //
@@ -10,7 +9,7 @@
 
 @implementation UIView (Gestures)
 
-- (void)wya_AddTapGesturesWithTapStyle:(WYATapGesturesStyle)tapStyle
+- (void)ll_AddTapGesturesWithTapStyle:(LLTapGesturesStyle)tapStyle
                              TapHandle:(void (^)(UITapGestureRecognizer * gesture))handle
 {
     UITapGestureRecognizer * tap =
@@ -18,13 +17,13 @@
                                             action:@selector(tapAction:)];
     //设置点按次数
     switch (tapStyle) {
-        case WYATapGesturesStyleSingle:
+        case LLTapGesturesStyleSingle:
             tap.numberOfTapsRequired = 1;
             objc_setAssociatedObject(self, @"tapOne", tap, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             objc_setAssociatedObject(self, @"tapOneHandle", handle,
                                      OBJC_ASSOCIATION_COPY_NONATOMIC);
             break;
-        case WYATapGesturesStyleDouble:
+        case LLTapGesturesStyleDouble:
             tap.numberOfTapsRequired = 2;
             objc_setAssociatedObject(self, @"tapTwo", tap, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             objc_setAssociatedObject(self, @"tapTwoHandle", handle,
@@ -62,7 +61,7 @@
     }
 }
 
-- (void)wya_AddLongPressGestureWithDuration:(NSTimeInterval)duration
+- (void)ll_AddLongPressGestureWithDuration:(NSTimeInterval)duration
                                      Handle:
                                      (void (^)(UILongPressGestureRecognizer * gesture))handle
 {
@@ -81,7 +80,7 @@
     handle(gesture);
 }
 
-- (void)wya_AddPanGestureWithHandle:(void (^)(UIPanGestureRecognizer * gesture))handle
+- (void)ll_AddPanGestureWithHandle:(void (^)(UIPanGestureRecognizer * gesture))handle
 {
     UIPanGestureRecognizer * pan =
     [[UIPanGestureRecognizer alloc] initWithTarget:self
@@ -96,7 +95,7 @@
     handle(gesture);
 }
 
-- (void)wya_AddSwipeGestureWithSwipeDirection:(UISwipeGestureRecognizerDirection)direction
+- (void)ll_AddSwipeGestureWithSwipeDirection:(UISwipeGestureRecognizerDirection)direction
                                   SwipeHandle:(void (^)(UISwipeGestureRecognizer * gesture))handle
 {
     UISwipeGestureRecognizer * swipe =
@@ -154,7 +153,7 @@
     }
 }
 
-- (void)wya_AddRotationGestureWithHandle:(void (^)(UIRotationGestureRecognizer * gesture))handle
+- (void)ll_AddRotationGestureWithHandle:(void (^)(UIRotationGestureRecognizer * gesture))handle
 {
     UIRotationGestureRecognizer * rotation =
     [[UIRotationGestureRecognizer alloc] initWithTarget:self
@@ -170,7 +169,7 @@
     handle(gesture);
 }
 
-- (void)wya_AddPinchGestureWithHandle:(void (^)(UIPinchGestureRecognizer * gesture))handle
+- (void)ll_AddPinchGestureWithHandle:(void (^)(UIPinchGestureRecognizer * gesture))handle
 {
     UIPinchGestureRecognizer * pinch =
     [[UIPinchGestureRecognizer alloc] initWithTarget:self

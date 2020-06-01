@@ -1,6 +1,5 @@
 //
 //  NSString+DisplayTime.m
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -9,7 +8,7 @@
 #import "NSString+DisplayTime.h"
 
 @implementation NSString (DisplayTime)
-+ (NSString *)wya_compareCurrentTime:(NSTimeInterval)compareDate
++ (NSString *)ll_compareCurrentTime:(NSTimeInterval)compareDate
 {
     NSDate * confromTimesp = [NSDate dateWithTimeIntervalSince1970:compareDate / 1000];
 
@@ -57,7 +56,7 @@
 
     return result;
 }
-+ (NSString *)wya_getDateStringWithTimestamp:(NSTimeInterval)timestamp
++ (NSString *)ll_getDateStringWithTimestamp:(NSTimeInterval)timestamp
 {
     NSDate * confromTimesp = [NSDate dateWithTimeIntervalSince1970:timestamp / 1000];
     NSCalendar * calendar =
@@ -74,7 +73,7 @@
                                       (long)referenceDay];
 }
 
-+ (NSString *)wya_getStringWithTimestamp:(NSTimeInterval)timestamp formatter:(NSString *)formatter
++ (NSString *)ll_getStringWithTimestamp:(NSTimeInterval)timestamp formatter:(NSString *)formatter
 {
     if ([NSString stringWithFormat:@"%@", @(timestamp)].length == 13) {
         timestamp /= 1000.0f;

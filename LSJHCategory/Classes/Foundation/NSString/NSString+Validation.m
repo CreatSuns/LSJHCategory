@@ -1,6 +1,5 @@
 //
 //  NSString+Safe.m
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -9,7 +8,7 @@
 #import "NSString+Validation.h"
 
 @implementation NSString (Validation)
-- (NSString *)wya_safeSubstringFromIndex:(NSUInteger)from
+- (NSString *)ll_safeSubstringFromIndex:(NSUInteger)from
 {
     if (from > self.length) {
         return nil;
@@ -18,7 +17,7 @@
     }
 }
 
-- (NSString *)wya_safeSubstringToIndex:(NSUInteger)to
+- (NSString *)ll_safeSubstringToIndex:(NSUInteger)to
 {
     if (to > self.length) {
         return nil;
@@ -27,7 +26,7 @@
     }
 }
 
-- (NSString *)wya_safeSubstringWithRange:(NSRange)range
+- (NSString *)ll_safeSubstringWithRange:(NSRange)range
 {
     NSUInteger location = range.location;
     NSUInteger length   = range.length;
@@ -38,7 +37,7 @@
     }
 }
 
-- (NSRange)wya_safeRangeOfString:(NSString *)aString
+- (NSRange)ll_safeRangeOfString:(NSString *)aString
 {
     if (aString == nil) {
         return NSMakeRange(NSNotFound, 0);
@@ -47,7 +46,7 @@
     }
 }
 
-- (NSRange)wya_safeRangeOfString:(NSString *)aString options:(NSStringCompareOptions)mask
+- (NSRange)ll_safeRangeOfString:(NSString *)aString options:(NSStringCompareOptions)mask
 {
     if (aString == nil) {
         return NSMakeRange(NSNotFound, 0);
@@ -56,7 +55,7 @@
     }
 }
 
-- (NSString *)wya_safeStringByAppendingString:(NSString *)aString
+- (NSString *)ll_safeStringByAppendingString:(NSString *)aString
 {
     if (aString == nil) {
         return [self stringByAppendingString:@""];

@@ -1,6 +1,5 @@
 //
 //  NSString+DisplayTime.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -15,7 +14,7 @@
  @param compareDate compareDate
  @return String
  */
-+ (NSString *)wya_compareCurrentTime:(NSTimeInterval)compareDate;
++ (NSString *)ll_compareCurrentTime:(NSTimeInterval)compareDate;
 
 /**
  通过时间戳得出对应的时间
@@ -23,7 +22,7 @@
  @param timestamp 时间戳
  @return String
  */
-+ (NSString *)wya_getDateStringWithTimestamp:(NSTimeInterval)timestamp;
++ (NSString *)ll_getDateStringWithTimestamp:(NSTimeInterval)timestamp;
 
 /**
  //通过时间戳和显示时间
@@ -31,6 +30,6 @@
  @param formatter 格式
  @return String
  */
-+ (NSString *)wya_getStringWithTimestamp:(NSTimeInterval)timestamp formatter:(NSString *)formatter;
++ (NSString *)ll_getStringWithTimestamp:(NSTimeInterval)timestamp formatter:(NSString *)formatter;
 
 @end

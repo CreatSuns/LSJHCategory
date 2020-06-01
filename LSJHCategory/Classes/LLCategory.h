@@ -13,25 +13,44 @@
 #import "WYAAppearance.h"
 
 /****************** UICategory ********************/
-#import "UIControl+category.h"
+#import "CALayer+Animation.h"
+
 #import "UIButton+Category.h"
+#import "UIButton+EnlargeTouchArea.h"
+#import "UIButton+Property.h"
+
+#import "UIControl+category.h"
+
 #import "UIColor+Category.h"
+
 #import "UIImage+Catagory.h"
 #import "UIImage+FixSource.h"
-#import "UIImage+WYAQRCode.h"
+#import "UIImage+QRCode.h"
+
 #import "UILabel+Category.h"
+#import "UILabel+Property.h"
+
 #import "UIMenuItem+Category.h"
+
 #import "UITableView+CellAnimation.h"
+
 #import "UITextField+Category.h"
+#import "UITextField+Property.h"
+
+#import "UITextView+PlaceHolder.h"
+
 #import "UIView+Category.h"
 #import "UIView+Gestures.h"
-#import "UIView+WYAAnimation.h"
-#import "UIView+WYALayout.h"
-#import "UIView+WYAToast.h"
+#import "UIView+Animation.h"
+#import "UIView+Layout.h"
+#import "UIView+Toast.h"
+
 #import "UIViewController+Catagory.h"
-#import "UITextView+WYAPlaceHolder.h"
+
 #import "UIDevice+Category.h"
+
 #import "UIScrollView+Category.h"
+
 /***************** FoundationCategory ***************/
 #import "NSArray+Category.h"
 #import "NSArray+Safe.h"
@@ -48,13 +67,13 @@
 #import "NSObject+Category.h"
 #import "NSObject+PerformBlock.h"
 #import "NSObject+Swizzle.h"
-#import "NSObject+WYANetWorkState.h"
+#import "NSObject+LLNetWorkState.h"
 #import "NSString+Category.h"
 #import "NSString+DisplayTime.h"
 #import "NSString+FilePath.h"
 #import "NSString+Encryption.h"
 #import "NSString+Predicate.h"
 #import "NSString+Validation.h"
-#import "NSString+WYAVersionCompare.h"
+#import "NSString+LLVersionCompare.h"
 #import "NSString+Restructuring.h"
 #endif /* LLCategory_h */

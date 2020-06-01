@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 LSJHCategory is available through [CocoaPods](https://cocoapods.org). To install
@@ -20,10 +18,45 @@ it, simply add the following line to your Podfile:
 pod 'LSJHCategory'
 ```
 
-## Author
+## Version History
 
-1228506851@qq.com, 1228506851@qq.com
+| 版本号 | 更新内容 |
+| --- | :-: |
+| 0.1.0 | 基础类别实现 |
+| 0.1.1 | 新增NSBundle分类、UIImage添加获取包内资源  |
 
-## License
+##### UI分类
 
-LSJHCategory is available under the MIT license. See the LICENSE file for more info.
+| UI模块名 | 链接文档 |
+| :-- | :-- |
+| CAlayer |  |
+| UIButton |  |
+| UIColor |  |
+| UIControl |  |
+| UIDevice |  |
+| UIImage |  |
+| UILabel |  |
+| UIMenuItem |  |
+| UINavigationViewController |  |
+| UIScrollView |  |
+| UITableView |  |
+| UITextFiled |  |
+| UITextView |  |
+| UIView |  |
+| UIViewController |  |
+
+##### NS分类
+
+| NS |  |  |
+| --- | --- | --- |
+| NSArray |  |  |
+| NSAttributedString |  |  |
+| NSDate |  |  |
+| NSDictionary |  |  |
+| NSInvocation |  |  |
+| NSNotificationCenter |  |  |
+| NSNumber |  |  |
+| NSObject |  |  |
+| NSString |  |  |
+
+

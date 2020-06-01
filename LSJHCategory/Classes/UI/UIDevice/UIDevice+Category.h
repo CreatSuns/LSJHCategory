@@ -15,14 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return 数值
  */
-+ (double)wya_phoneFreeMemory;
++ (double)ll_phoneFreeMemory;
 
 /**
  获取文件或文件夹大小
 
  @return 大小
  */
-+ (unsigned long long)wya_fileSizeWithPath:(NSString *)path;
++ (unsigned long long)ll_fileSizeWithPath:(NSString *)path;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,7 +10,7 @@
 
 @implementation UILabel (Category)
 
-- (void)alignTop
+- (void)ll_alignTop
 {
     CGSize fontSize = [self.text sizeWithAttributes:@{NSFontAttributeName : self.font}];
     //    控件的高度除以一行文字的高度
@@ -24,7 +24,7 @@
     }
 }
 
-- (void)alignBottom
+- (void)ll_alignBottom
 {
     CGSize fontSize = [self.text sizeWithAttributes:@{NSFontAttributeName : self.font}];
     //控件的高度除以一行文字的高度
@@ -38,7 +38,7 @@
     }
 }
 
-- (void)changeLineSpaceForLabelWithSpace:(float)space text:(NSString *)labelText
+- (void)ll_changeLineSpaceForLabelWithSpace:(float)space text:(NSString *)labelText
 {
     NSMutableAttributedString * attributedString =
     [[NSMutableAttributedString alloc] initWithString:labelText];
@@ -51,7 +51,7 @@
     [self sizeToFit];
 }
 
-- (void)changeWordSpaceForLabelWithSpace:(float)space
+- (void)ll_changeWordSpaceForLabelWithSpace:(float)space
 {
     NSString * labelText = self.text;
     NSMutableAttributedString * attributedString =
@@ -67,7 +67,7 @@
     [self sizeToFit];
 }
 
-- (void)changeSpaceForLabelWithLineSpace:(float)lineSpace WordSpace:(float)wordSpace
+- (void)ll_changeSpaceForLabelWithLineSpace:(float)lineSpace WordSpace:(float)wordSpace
 {
     NSString * labelText = self.text;
     NSMutableAttributedString * attributedString =
@@ -84,7 +84,7 @@
     [self sizeToFit];
 }
 
-+ (CGFloat)getHeightByWidth:(CGFloat)width title:(NSString *)title font:(UIFont *)font
++ (CGFloat)ll_getHeightByWidth:(CGFloat)width title:(NSString *)title font:(UIFont *)font
 {
     UILabel * label     = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 0)];
     label.text          = title;
@@ -95,97 +95,13 @@
     return height;
 }
 
-+ (CGFloat)getWidthWithTitle:(NSString *)title font:(UIFont *)font
++ (CGFloat)ll_getWidthWithTitle:(NSString *)title font:(UIFont *)font
 {
     UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1000, 0)];
     label.text      = title;
     label.font      = font;
     [label sizeToFit];
     return label.frame.size.width;
-}
-
-@end
-
-@implementation UILabel (Property)
-
-- (UILabel * (^)(CGFloat))setupSystemFontSize
-{
-    return ^UILabel *(CGFloat fontSize)
-    {
-        self.font = [UIFont systemFontOfSize:fontSize];
-        return self;
-    };
-}
-
-- (UILabel * (^)(UIColor *))setupTextColor
-{
-    return ^UILabel *(UIColor * color)
-    {
-        self.textColor = color;
-        return self;
-    };
-}
-
-- (UILabel * (^)(NSTextAlignment))setupAlignment
-{
-    return ^UILabel *(NSTextAlignment alignment)
-    {
-        self.textAlignment = alignment;
-        return self;
-    };
-}
-
-- (UILabel * (^)(CGFloat))setupLineSpace
-{
-    return ^UILabel *(CGFloat space)
-    {
-        NSAssert(self.text.length != 0, @"文本无内容");
-        NSMutableAttributedString * attributedString =
-        [[NSMutableAttributedString alloc] initWithString:self.text];
-        NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-        [paragraphStyle setLineSpacing:space];
-        [attributedString addAttribute:NSParagraphStyleAttributeName
-                                 value:paragraphStyle
-                                 range:NSMakeRange(0, [self.text length])];
-        self.attributedText = attributedString;
-        return self;
-    };
-}
-
-- (UILabel * (^)(NSInteger))setupNumberOfLines
-{
-    return ^UILabel *(NSInteger lines)
-    {
-        self.numberOfLines = lines;
-        return self;
-    };
-}
-
-- (UILabel * (^)(NSString *))setupText
-{
-    return ^UILabel *(NSString * text)
-    {
-        self.text = text;
-        return self;
-    };
-}
-
-- (UILabel * (^)(BOOL))setupUserInteractionEnabled
-{
-    return ^UILabel *(BOOL enable)
-    {
-        self.userInteractionEnabled = enable;
-        return self;
-    };
-}
-
-- (UILabel * (^)(UIBaselineAdjustment))setupBaselineAdjustment
-{
-    return ^UILabel *(UIBaselineAdjustment alignment)
-    {
-        self.baselineAdjustment = alignment;
-        return self;
-    };
 }
 
 @end

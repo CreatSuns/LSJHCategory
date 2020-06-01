@@ -10,7 +10,7 @@
 #include <sys/param.h>
 
 @implementation UIDevice (Category)
-+ (double)wya_phoneFreeMemory
++ (double)ll_phoneFreeMemory
 {
     //可用大小
     struct statfs buf;
@@ -21,7 +21,7 @@
     return (double)freespace / 1024 / 1024 / 1024;
 }
 
-+ (unsigned long long)wya_fileSizeWithPath:(NSString *)path
++ (unsigned long long)ll_fileSizeWithPath:(NSString *)path
 {
     // 总大小
     unsigned long long size = 0;

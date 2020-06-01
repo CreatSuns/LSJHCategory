@@ -9,11 +9,11 @@
 #import "UIImage+Catagory.h"
 #import <AVFoundation/AVFoundation.h>
 #import <ImageIO/ImageIO.h>
-#import <SVGKit/SVGKit.h>
+
 
 @implementation UIImage (Catagory)
 
-+ (UIImage *)wya_ImageSizeWithScreenImage:(UIImage *)image
++ (UIImage *)ll_ImageSizeWithScreenImage:(UIImage *)image
 {
     CGFloat imageWidth  = image.size.width;
     CGFloat imageHeight = image.size.height;
@@ -42,7 +42,7 @@
             alphaInfo == kCGImageAlphaPremultipliedLast);
 }
 
-- (UIImage *)wya_croppedImageWithFrame:(CGRect)frame
+- (UIImage *)ll_croppedImageWithFrame:(CGRect)frame
                                  angle:(NSInteger)angle
                           circularClip:(BOOL)circular
 {
@@ -85,7 +85,7 @@
                          orientation:UIImageOrientationUp];
 }
 
-+ (UIImage *)wya_ImageCompressFitSizeScale:(UIImage *)sourceImage targetSize:(CGSize)size
++ (UIImage *)ll_ImageCompressFitSizeScale:(UIImage *)sourceImage targetSize:(CGSize)size
 {
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     [sourceImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
@@ -98,10 +98,11 @@
 
 @implementation UIImage (Source)
 
-+ (UIImage *)loadBundleImage:(NSString *)imageName ClassName:(NSString *)className
++ (UIImage *)ll_loadBundleImage:(NSString *)imageName ClassName:(NSString *)className bundleName:(NSString *)bundleName
 {
+    NSString * bundleNameCopy = [NSString stringWithFormat:@"/%@.bundle", bundleName];
     NSString * bundlePath = [[NSBundle bundleForClass:NSClassFromString(className)]
-                             .resourcePath stringByAppendingPathComponent:@"/LLCategory.bundle"];
+                             .resourcePath stringByAppendingPathComponent:bundleNameCopy];
     NSBundle * resource_bundle = [NSBundle bundleWithPath:bundlePath];
     UIImage * image =
     [UIImage imageNamed:imageName
@@ -110,7 +111,7 @@
     return image;
 }
 
-+ (UIImage *)wya_createImageWithColor:(UIColor * _Nonnull)color
++ (UIImage *)ll_createImageWithColor:(UIColor * _Nonnull)color
 {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
@@ -125,7 +126,7 @@
     return tempImage;
 }
 
-+ (NSDictionary *)wya_imageInfoWithUrl:(NSString *)urlString
++ (NSDictionary *)ll_imageInfoWithUrl:(NSString *)urlString
 {
     NSURL * url             = [NSURL URLWithString:urlString];
     CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)url, NULL);
@@ -135,14 +136,14 @@
     return imageHeader;
 }
 
-+ (UIImage *)wya_svgImageName:(NSString *)name size:(CGSize)size
++ (UIImage *)ll_svgImageName:(NSString *)name size:(CGSize)size
 {
     SVGKImage * image = [SVGKImage imageNamed:name];
     image.size        = size;
     return image.UIImage;
 }
 
-+ (UIImage *)wya_svgImageName:(NSString *)name size:(CGSize)size ClassName:(NSString *)className
++ (UIImage *)ll_svgImageName:(NSString *)name size:(CGSize)size ClassName:(NSString *)className
 {
     NSString * bundlePath = [[NSBundle bundleForClass:NSClassFromString(className)]
                              .resourcePath stringByAppendingPathComponent:@"/LLCategory.bundle"];
@@ -153,7 +154,7 @@
 }
 
 // 获取视频第一帧
-+ (UIImage *)wya_getVideoPreViewImage:(NSURL *)path
++ (UIImage *)ll_getVideoPreViewImage:(NSURL *)path
 {
     AVURLAsset * asset                      = [[AVURLAsset alloc] initWithURL:path options:nil];
     AVAssetImageGenerator * assetGen        = [[AVAssetImageGenerator alloc] initWithAsset:asset];
@@ -167,7 +168,7 @@
     return videoImage;
 }
 
-+ (UIImage *)wya_imageWithColor:(UIColor *)color size:(CGSize)size rate:(CGFloat)rate
++ (UIImage *)ll_imageWithColor:(UIColor *)color size:(CGSize)size rate:(CGFloat)rate
 {
     CGFloat imageW = size.width;
     CGFloat imageH = size.height;
@@ -197,7 +198,7 @@
 }
 
 /// 返回一张可以拉伸的图片
-+ (UIImage *)wya_resizeImageNamed:(NSString *)name
++ (UIImage *)ll_resizeImageNamed:(NSString *)name
 {
     UIImage * normal = [UIImage imageNamed:name];
     CGFloat width    = normal.size.width * 0.5;
@@ -207,7 +208,7 @@
     return normal;
 }
 
-+ (UIImage *)wya_createViewImage:(UIView *)view
++ (UIImage *)ll_createViewImage:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, [UIScreen mainScreen].scale);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];

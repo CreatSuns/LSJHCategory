@@ -1,6 +1,5 @@
 //
 //  NSString+Encryption.m
-//  WYAKit
 //
 //  Created by 李世航 on 2019/6/22.
 //
@@ -13,7 +12,7 @@
 @end
 
 @implementation NSString (MD5)
-- (NSString *)wya_md5WithString
+- (NSString *)ll_md5WithString
 {
     if (self == nil || [self length] == 0) {
         return nil;
@@ -33,19 +32,19 @@
     return outputString;
 }
 
-- (NSString *)wya_to16MD5
+- (NSString *)ll_to16MD5
 {
     if (self == nil || [self length] == 0) {
         return nil;
     }
 
-    return [[self wya_md5WithString] substringWithRange:NSMakeRange(8, 16)];
+    return [[self ll_md5WithString] substringWithRange:NSMakeRange(8, 16)];
 }
 @end
 
 @implementation NSString (SHA)
 
-- (NSString *)wya_sha1
+- (NSString *)ll_sha1
 {
     if (self == nil || [self length] == 0) {
         return nil;
@@ -62,7 +61,7 @@
     return [ms copy];
 }
 
-- (NSString *)wya_sha256
+- (NSString *)ll_sha256
 {
     if (self == nil || [self length] == 0) {
         return nil;
@@ -80,7 +79,7 @@
     return [ms copy];
 }
 
-- (NSString *)wya_sha512
+- (NSString *)ll_sha512
 {
     if (self == nil || [self length] == 0) {
         return nil;

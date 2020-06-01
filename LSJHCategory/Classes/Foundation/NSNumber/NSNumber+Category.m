@@ -1,6 +1,5 @@
 //
 //  NSNumber+Category.m
-//  WYAiOSEnv
 //
 //  Created by 李俊恒 on 2018/7/9.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -11,7 +10,7 @@
 
 @implementation NSNumber (Category)
 
-- (NSString *)wya_romanNumeral
+- (NSString *)ll_romanNumeral
 {
     NSInteger n = [self integerValue];
 
@@ -26,14 +25,14 @@
     for (NSUInteger i = 0; i < valueCount; i++) {
         while (n >= values[i]) {
             n -= values[i];
-            [numeralString appendString:[numerals wya_safeObjectAtIndex:i]];
+            [numeralString appendString:[numerals ll_safeObjectAtIndex:i]];
         }
     }
     return numeralString;
 }
 
 #pragma mark - round, ceil, floor
-- (NSNumber *)wya_doRoundWithDigit:(NSUInteger)digit
+- (NSNumber *)ll_doRoundWithDigit:(NSUInteger)digit
 {
     NSNumber * result             = nil;
     NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
@@ -44,7 +43,7 @@
     return result;
 }
 
-- (NSNumber *)wya_doCeilWithDigit:(NSUInteger)digit
+- (NSNumber *)ll_doCeilWithDigit:(NSUInteger)digit
 {
     NSNumber * result             = nil;
     NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
@@ -54,7 +53,7 @@
     return result;
 }
 
-- (NSNumber *)wya_doFloorWithDigit:(NSUInteger)digit
+- (NSNumber *)ll_doFloorWithDigit:(NSUInteger)digit
 {
     NSNumber * result             = nil;
     NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];

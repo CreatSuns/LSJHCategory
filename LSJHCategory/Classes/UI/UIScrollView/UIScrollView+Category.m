@@ -9,7 +9,7 @@
 
 @implementation UIScrollView (Category)
 
-- (UIImage *)wya_captureScrollView
+- (UIImage *)ll_captureScrollView
 {
     UIImage * viewImage      = nil;
     UITableView * scrollView = self;

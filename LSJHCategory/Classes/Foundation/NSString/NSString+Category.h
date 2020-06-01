@@ -1,6 +1,5 @@
 //
 //  NSString+Category.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -18,7 +17,7 @@
  @param value 金额
  @return string
  */
-+ (NSString *)wya_stringChineseFormat:(double)value;
++ (NSString *)ll_stringChineseFormat:(double)value;
 
 /**
  添加数字的千位符
@@ -26,14 +25,14 @@
  @param num need change string
  @return string
  */
-+ (NSString *)wya_countNumAndChangeformat:(NSString *)num;
++ (NSString *)ll_countNumAndChangeformat:(NSString *)num;
 
 /**
  *  NSString转为NSNumber
  *
  *  @return NSNumber
  */
-- (NSNumber *)wya_toNumber;
+- (NSNumber *)ll_toNumber;
 
 /**
  计算文字高度
@@ -42,7 +41,7 @@
  @param width 最大宽度
  @return hight 高度
  */
-- (CGFloat)wya_heightWithFontSize:(CGFloat)fontSize width:(CGFloat)width;
+- (CGFloat)ll_heightWithFontSize:(CGFloat)fontSize width:(CGFloat)width;
 
 /**
  计算文字宽度
@@ -51,7 +50,7 @@
  @param maxHeight 最大高度
  @return width宽度
  */
-- (CGFloat)wya_widthWithFontSize:(CGFloat)fontSize height:(CGFloat)maxHeight;
+- (CGFloat)ll_widthWithFontSize:(CGFloat)fontSize height:(CGFloat)maxHeight;
 @end
 
 @interface NSString (Html)
@@ -60,12 +59,12 @@
 
  @return string
  */
-- (NSString *)wya_stringByStrippingHTML;
+- (NSString *)ll_stringByStrippingHTML;
 
 /**
  清除js脚本
 
  @return string
  */
-- (NSString *)wya_stringByRemovingScriptsAndStrippingHTML;
+- (NSString *)ll_stringByRemovingScriptsAndStrippingHTML;
 @end

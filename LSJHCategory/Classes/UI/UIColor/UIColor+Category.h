@@ -1,6 +1,5 @@
 //
 //  UIColor+Category.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -19,7 +18,7 @@
  *
  *  example: rgb(173.0,23.0,11.0)
  */
-UIColor * wya_rgb(CGFloat red, CGFloat green, CGFloat blue);
+UIColor * ll_rgb(CGFloat red, CGFloat green, CGFloat blue);
 
 /**
  *  功能:通过RGB以及alpha创建颜色
@@ -33,7 +32,7 @@ UIColor * wya_rgb(CGFloat red, CGFloat green, CGFloat blue);
  *
  *  example: rgbA(173.0,23.0,11.0,0.5)
  */
-UIColor * wya_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
+UIColor * ll_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
 
 @interface UIColor (Category)
 
@@ -49,7 +48,7 @@ UIColor * wya_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  *
  *  @return Returns the UIColor instance
  */
-+ (UIColor *)wya_hex:(NSString *)hexString;
++ (UIColor *)ll_hex:(NSString *)hexString;
 
 /**
  *  通过0xffffff的16进制数字创建颜色
@@ -58,7 +57,7 @@ UIColor * wya_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  *
  *  @return UIColor
  */
-+ (UIColor *)wya_colorWithRGB:(NSUInteger)aRGB;
++ (UIColor *)ll_colorWithRGB:(NSUInteger)aRGB;
 
 /**
  调节颜色的明亮度
@@ -67,7 +66,7 @@ UIColor * wya_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  @param delta 明亮度
  @return color
  */
-+ (UIColor *)wya_colorRGBonvertToHSB:(UIColor *)color withBrighnessDelta:(CGFloat)delta;
++ (UIColor *)ll_colorRGBonvertToHSB:(UIColor *)color withBrighnessDelta:(CGFloat)delta;
 
 /**
  调整颜色的透明度
@@ -76,7 +75,7 @@ UIColor * wya_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  @param delta 透明度
  @return color
  */
-+ (UIColor *)wya_colorRGBonvertToHSB:(UIColor *)color withAlphaDelta:(CGFloat)delta;
++ (UIColor *)ll_colorRGBonvertToHSB:(UIColor *)color withAlphaDelta:(CGFloat)delta;
 
 /**
  将UIColor对象转换为字符串
@@ -84,6 +83,6 @@ UIColor * wya_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  @param color 需要转换的对象
  @return 返回字符串
  */
-+ (NSString *)wya_toStrByUIColor:(UIColor *)color;
++ (NSString *)ll_toStrByUIColor:(UIColor *)color;
 
 @end

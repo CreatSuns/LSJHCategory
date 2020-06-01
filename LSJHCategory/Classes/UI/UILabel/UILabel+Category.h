@@ -13,12 +13,12 @@
 /**
  label文字顶部对齐
  */
-- (void)alignTop;
+- (void)ll_alignTop;
 
 /**
  label文字底部对齐
  */
-- (void)alignBottom;
+- (void)ll_alignBottom;
 
 /**
  改变行间距
@@ -26,19 +26,21 @@
  @param space 间距
  @param labelText 文字
  */
-- (void)changeLineSpaceForLabelWithSpace:(float)space text:(NSString *)labelText;
+- (void)ll_changeLineSpaceForLabelWithSpace:(float)space
+                                       text:(NSString *)labelText;
 
 /**
  改变字间距
 
  @param space 间距
  */
-- (void)changeWordSpaceForLabelWithSpace:(float)space;
+- (void)ll_changeWordSpaceForLabelWithSpace:(float)space;
 
 /**
  *  改变行间距和字间距
  */
-- (void)changeSpaceForLabelWithLineSpace:(float)lineSpace WordSpace:(float)wordSpace;
+- (void)ll_changeSpaceForLabelWithLineSpace:(float)lineSpace
+                                  WordSpace:(float)wordSpace;
 
 /**
  获得UILabel高度
@@ -48,7 +50,9 @@
  @param font font
  @return 返回高度
  */
-+ (CGFloat)getHeightByWidth:(CGFloat)width title:(NSString *)title font:(UIFont *)font;
++ (CGFloat)ll_getHeightByWidth:(CGFloat)width
+                         title:(NSString *)title
+                          font:(UIFont *)font;
 
 /**
  获得UILabel宽度
@@ -57,34 +61,7 @@
  @param font fon
  @return 返回宽度
  */
-+ (CGFloat)getWidthWithTitle:(NSString *)title font:(UIFont *)font;
++ (CGFloat)ll_getWidthWithTitle:(NSString *)title
+                           font:(UIFont *)font;
 
-@end
-
-/**
- 链式语法调用，设置文本属性
- Example:
-         UILabel * label = [[UILabel alloc]init];
-         label.setupText(@"哈哈").
-         setupTextColor([UIColor redColor]).
-         setupSystemFontSize(15).
-         setupNumberOfLines(0)
- */
-@interface UILabel (Property)
-/// 设置标题
-@property (nonatomic, copy) UILabel * (^setupText)(NSString * text);
-/// 设置标题颜色
-@property (nonatomic, copy) UILabel * (^setupTextColor)(UIColor * color);
-/// 设置标题大小
-@property (nonatomic, copy) UILabel * (^setupSystemFontSize)(CGFloat fontSize);
-/// 设置文本对齐方式
-@property (nonatomic, copy) UILabel * (^setupAlignment)(NSTextAlignment alignment);
-/// 设置行数
-@property (nonatomic, copy) UILabel * (^setupNumberOfLines)(NSInteger lines);
-/// 设置行间距
-@property (nonatomic, copy) UILabel * (^setupLineSpace)(CGFloat space);
-/// 设置用户交互性
-@property (nonatomic, copy) UILabel * (^setupUserInteractionEnabled)(BOOL enable);
-/// 设置文本纵向对齐方式
-@property (nonatomic, copy) UILabel * (^setupBaselineAdjustment)(UIBaselineAdjustment alignment);
 @end

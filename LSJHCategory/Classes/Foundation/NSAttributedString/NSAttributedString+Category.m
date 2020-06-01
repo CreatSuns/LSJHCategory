@@ -1,6 +1,5 @@
 //
 //  NSAttributedString+Category.m
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/4.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -11,7 +10,7 @@
 #import <CoreText/CoreText.h>
 
 @implementation NSAttributedString (Category)
-- (CGFloat)wya_heightWithContainWidth:(CGFloat)width
+- (CGFloat)ll_heightWithContainWidth:(CGFloat)width
 {
     int total_height = 0;
     CTFramesetterRef framesetter =
@@ -31,7 +30,7 @@
     CGFloat ascent;
     CGFloat descent;
     CGFloat leading;
-    CTLineRef line = (__bridge CTLineRef)[linesArray wya_safeObjectAtIndex:[linesArray count] - 1];
+    CTLineRef line = (__bridge CTLineRef)[linesArray ll_safeObjectAtIndex:[linesArray count] - 1];
     CTLineGetTypographicBounds(line, &ascent, &descent, &leading);
 
     total_height = 100000 - line_y + (int)descent + 1;

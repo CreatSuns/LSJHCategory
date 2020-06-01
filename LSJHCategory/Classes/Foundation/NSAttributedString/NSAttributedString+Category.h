@@ -1,6 +1,5 @@
 //
 //  NSAttributedString+Category.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/4.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -16,5 +15,5 @@
  @param width AttributedString Width
  @return AttributedString height
  */
-- (CGFloat)wya_heightWithContainWidth:(CGFloat)width;
+- (CGFloat)ll_heightWithContainWidth:(CGFloat)width;
 @end

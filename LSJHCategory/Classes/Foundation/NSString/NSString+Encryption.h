@@ -1,6 +1,5 @@
 //
 //  NSString+Encryption.h
-//  WYAKit
 //
 //  Created by 李世航 on 2019/6/22.
 //
@@ -14,14 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface NSString (MD5)
-- (NSString *)wya_md5WithString; // MD5加密
-- (NSString *)wya_to16MD5;
+- (NSString *)ll_md5WithString; // MD5加密
+- (NSString *)ll_to16MD5;
 @end
 
 @interface NSString (SHA)
-- (NSString *)wya_sha1;
-- (NSString *)wya_sha256;
-- (NSString *)wya_sha512;
+- (NSString *)ll_sha1;
+- (NSString *)ll_sha256;
+- (NSString *)ll_sha512;
 @end
 
 NS_ASSUME_NONNULL_END

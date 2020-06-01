@@ -1,6 +1,5 @@
 //
 //  NSArray+Sudoku.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李世航 on 18/7/8.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -19,7 +18,7 @@
  *  @param leadSpacing     左间距
  *  @param tailSpacing     右间距
  */
-- (void)wya_mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
+- (void)mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
                                         fixedItemHeight:(CGFloat)fixedItemHeight
                                               warpCount:(NSInteger)warpCount
                                              topSpacing:(CGFloat)topSpacing
@@ -38,7 +37,7 @@
  *  @param leadSpacing           左间距
  *  @param tailSpacing           右间距
  */
-- (void)wya_mas_distributeSudokuViewsWithFixedLineSpacing:(CGFloat)fixedLineSpacing
+- (void)mas_distributeSudokuViewsWithFixedLineSpacing:(CGFloat)fixedLineSpacing
                                     fixedInteritemSpacing:(CGFloat)fixedInteritemSpacing
                                                 warpCount:(NSInteger)warpCount
                                                topSpacing:(CGFloat)topSpacing
@@ -71,7 +70,7 @@
  *  @return Normal will return [self copy], If warpCount bigger than [self count] , It will return a
  * empty views filled array, you could enumerate [subview removeFromSuperview] or do other things;
  */
-- (NSArray *)wya_mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
+- (NSArray *)mas_distributeSudokuViewsWithFixedItemWidth:(CGFloat)fixedItemWidth
                                              fixedItemHeight:(CGFloat)fixedItemHeight
                                             fixedLineSpacing:(CGFloat)fixedLineSpacing
                                        fixedInteritemSpacing:(CGFloat)fixedInteritemSpacing
@@ -95,8 +94,7 @@
  @param tailSpacing 右间距
  @return return array
  */
-- (NSArray *)
-wya_mas_distributeSpecialSudokuViewsWithFixedItemWidths:(NSArray<NSNumber *> *)fixedItemWidths
+- (NSArray *)mas_distributeSpecialSudokuViewsWithFixedItemWidths:(NSArray<NSNumber *> *)fixedItemWidths
                                        fixedItemHeights:(NSArray<NSNumber *> *)fixedItemHeights
                                        fixedLineSpacing:(CGFloat)fixedLineSpacing
                                   fixedInteritemSpacing:(CGFloat)fixedInteritemSpacing

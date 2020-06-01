@@ -1,6 +1,5 @@
 //
 //  NSObject+Category.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/4.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -52,35 +51,35 @@ typedef void (^TYNFinishBlock)(void);
 
  @return 版本号
  */
-+ (NSString *)wya_version;
++ (NSString *)ll_version;
 
 /**
  获取build版本号
 
  @return build版本号
  */
-+ (NSInteger)wya_build;
++ (NSInteger)ll_build;
 
 /**
  获取BundleID
 
  @return BundleID
  */
-+ (NSString *)wya_identifier;
++ (NSString *)ll_identifier;
 
 /**
  当前语言
 
  @return 语言
  */
-+ (NSString *)wya_currentLanguage;
++ (NSString *)ll_currentLanguage;
 
 /**
  获取手机具体型号
 
  @return 型号
  */
-+ (NSString *)wya_deviceModel;
++ (NSString *)ll_deviceModel;
 
 /**
  按钮倒计时
@@ -89,7 +88,7 @@ typedef void (^TYNFinishBlock)(void);
  @param countDownBlock 每秒倒计时会执行的block
  @param finishBlock 倒计时完成会执行的block
  */
-- (void)wya_countDownTime:(NSUInteger)time
+- (void)ll_countDownTime:(NSUInteger)time
            countDownBlock:(TYNCountDownBlock)countDownBlock
              outTimeBlock:(TYNFinishBlock)finishBlock;
 

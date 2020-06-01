@@ -1,6 +1,5 @@
 //
 //  NSDate+ChineseDate.m
-//  WYAKit
 //
 //  Created by 李世航 on 2019/8/5.
 //
@@ -9,40 +8,40 @@
 
 @implementation NSDate (ChineseDate)
 
-+ (NSUInteger)wya_chineseYearWithDate:(NSDate *)date
++ (NSUInteger)ll_chineseYearWithDate:(NSDate *)date
 {
-    return [date wya_chineseYear];
+    return [date ll_chineseYear];
 }
 
-+ (NSUInteger)wya_chineseMouthWithDate:(NSDate *)date
++ (NSUInteger)ll_chineseMouthWithDate:(NSDate *)date
 {
-    return [date wya_chineseMouth];
+    return [date ll_chineseMouth];
 }
 
-+ (NSUInteger)wya_chineseDayWithDate:(NSDate *)date
++ (NSUInteger)ll_chineseDayWithDate:(NSDate *)date
 {
-    return [date wya_chineseDay];
+    return [date ll_chineseDay];
 }
 
-- (NSUInteger)wya_chineseYear
+- (NSUInteger)ll_chineseYear
 {
     NSCalendar * calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierChinese];
     return [calendar component:NSCalendarUnitYear fromDate:self];
 }
 
-- (NSUInteger)wya_chineseMouth
+- (NSUInteger)ll_chineseMouth
 {
     NSCalendar * calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierChinese];
     return [calendar component:NSCalendarUnitMonth fromDate:self];
 }
 
-- (NSUInteger)wya_chineseDay
+- (NSUInteger)ll_chineseDay
 {
     NSCalendar * calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierChinese];
     return [calendar component:NSCalendarUnitDay fromDate:self];
 }
 
-- (NSString *)wya_chineseDayString
+- (NSString *)ll_chineseDayString
 {
     NSArray * array = @[
         @"初一",

@@ -1,6 +1,5 @@
 //
 //  NSString+Restructuring.m
-//  WYAKit
 //
 //  Created by 李世航 on 2019/6/22.
 //
@@ -8,7 +7,7 @@
 #import "NSString+Restructuring.h"
 
 @implementation NSString (Restructuring)
-+ (NSString *)wya_getSecrectStringWithPhoneNumber:(NSString *)phoneNum
++ (NSString *)ll_getSecrectStringWithPhoneNumber:(NSString *)phoneNum
 {
     if (phoneNum.length == 11) {
         NSMutableString * newStr = [NSMutableString stringWithString:phoneNum];
@@ -19,7 +18,7 @@
     return nil;
 }
 
-+ (NSString *)wya_getSecrectStringWithAccountNo:(NSString *)accountNo
++ (NSString *)ll_getSecrectStringWithAccountNo:(NSString *)accountNo
 {
     NSMutableString * newStr = [NSMutableString stringWithString:accountNo];
     NSRange range            = NSMakeRange(4, 8);
@@ -29,7 +28,7 @@
     return newStr;
 }
 
-+ (NSString *)wya_stringMobileFormat:(NSString *)mobile
++ (NSString *)ll_stringMobileFormat:(NSString *)mobile
 {
     if (mobile.length == 11) {
         NSMutableString * value = [[NSMutableString alloc] initWithString:mobile];
@@ -41,22 +40,22 @@
     return nil;
 }
 
-- (NSString *)wya_trimmedString
+- (NSString *)ll_trimmedString
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
 }
 
-- (NSString *)wya_trimmingWhitespace
+- (NSString *)ll_trimmingWhitespace
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
-- (NSString *)wya_trimmingWhitespaceAndNewlines
+- (NSString *)ll_trimmingWhitespaceAndNewlines
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)wya_removeUnwantedZero
+- (NSString *)ll_removeUnwantedZero
 {
     if ([[self substringWithRange:NSMakeRange(self.length - 3, 3)] isEqualToString:@"000"]) {
         return [self substringWithRange:NSMakeRange(0, self.length - 4)]; // 多一个小数点
@@ -69,7 +68,7 @@
     }
 }
 
-+ (NSString *)wya_randomStringWithLength:(NSInteger)len
++ (NSString *)ll_randomStringWithLength:(NSInteger)len
 {
     NSString * letters             = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSMutableString * randomString = [NSMutableString stringWithCapacity:len];
@@ -83,7 +82,7 @@
 
 @implementation NSString (RestructuringUrl)
 
-+ (NSDictionary *)wya_breakupUrlStringFetchParams:(NSString *)urlString
++ (NSDictionary *)ll_breakupUrlStringFetchParams:(NSString *)urlString
 {
     if (!urlString) return nil;
     NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithCapacity:0];

@@ -9,6 +9,6 @@
  @param orient 设置方向
  @return image
  */
-- (UIImage *)rotate:(UIImageOrientation)orient;
+- (UIImage *)ll_rotate:(UIImageOrientation)orient;
 
 @end

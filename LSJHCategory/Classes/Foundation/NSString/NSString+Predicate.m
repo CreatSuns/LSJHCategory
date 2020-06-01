@@ -1,6 +1,5 @@
 //
 //  NSString+Predicate.m
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -9,7 +8,7 @@
 #import "NSString+Predicate.h"
 
 @implementation NSString (Predicate)
-- (BOOL)wya_isValidMobileNumber
+- (BOOL)ll_isValidMobileNumber
 {
     NSString * const MOBILE = @"^1(3|4|5|7|8)\\d{9}$";
 
@@ -17,14 +16,14 @@
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidVerifyCode
+- (BOOL)ll_isValidVerifyCode
 {
     NSString * pattern      = @"^[0-9]{4}";
     NSPredicate * predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidRealName
+- (BOOL)ll_isValidRealName
 
 {
     NSString * nicknameRegex = @"^[\u4e00-\u9fa5]{2,8}$";
@@ -34,7 +33,7 @@
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isOnlyChinese
+- (BOOL)ll_isOnlyChinese
 {
     NSString * chineseTest = @"^[\u4e00-\u9fa5]{0,}$";
     NSPredicate * chinesePredicate =
@@ -42,7 +41,7 @@
     return [chinesePredicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidBankCardNumber
+- (BOOL)ll_isValidBankCardNumber
 {
     NSString * const BANKCARD = @"^(\\d{16}|\\d{19})$";
 
@@ -50,14 +49,14 @@
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidEmail
+- (BOOL)ll_isValidEmail
 {
     NSString * emailRegex   = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate * emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
 
     return [emailTest evaluateWithObject:self];
 }
-- (BOOL)wya_validateNickName
+- (BOOL)ll_validateNickName
 {
     NSString * userNameRegex = @"^[A-Za-z0-9\u4e00-\u9fa5]{1,24}+$";
 
@@ -66,7 +65,7 @@
 
     return [userNamePredicate evaluateWithObject:self];
 }
-- (BOOL)wya_isValidAlphaNumberPassword
+- (BOOL)ll_isValidAlphaNumberPassword
 {
     NSString * regex = @"^(?!\\d+$|[a-zA-Z]+$)\\w{6,12}$";
     NSPredicate * identityCardPredicate =
@@ -74,7 +73,7 @@
     return [identityCardPredicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidIdentifyFifteen
+- (BOOL)ll_isValidIdentifyFifteen
 {
     NSString * identifyTest = @"^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$";
     NSPredicate * identifyPredicate =
@@ -82,7 +81,7 @@
     return [identifyPredicate evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidIdentifyEighteen
+- (BOOL)ll_isValidIdentifyEighteen
 {
     NSString * identifyTest =
     @"^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$";
@@ -92,7 +91,7 @@
 }
 
 //身份证号
-- (BOOL)wya_simpleVerifyIdentityCardNum
+- (BOOL)ll_simpleVerifyIdentityCardNum
 {
     NSString * regex2 = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
     NSPredicate * pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex2];
@@ -100,7 +99,7 @@
 }
 
 //车牌
-- (BOOL)wya_isCarNumber
+- (BOOL)ll_isCarNumber
 {
     //车牌号:湘K-DE829 香港车牌号码:粤Z-J499港
     NSString * carRegex =
@@ -111,7 +110,7 @@
 }
 
 //精确的身份证号码有效性检测
-+ (BOOL)wya_accurateVerifyIDCardNumber:(NSString *)value
++ (BOOL)ll_accurateVerifyIDCardNumber:(NSString *)value
 {
     value =
     [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -285,7 +284,7 @@
  *  2，将奇位乘积的个十位全部相加，再加上所有偶数位上的数字
  *  3，将加法和加上校验位能被 10 整除。
  */
-- (BOOL)wya_bankCardluhmCheck
+- (BOOL)ll_bankCardluhmCheck
 {
     NSString * lastNum    = [[self substringFromIndex:(self.length - 1)] copy]; //取出最后一位
     NSString * forwardNum = [[self substringToIndex:(self.length - 1)] copy];   //前15或18位
@@ -343,7 +342,7 @@
     return (luhmTotal % 10 == 0) ? YES : NO;
 }
 
-- (BOOL)wya_isIPAddress
+- (BOOL)ll_isIPAddress
 {
     NSString * regex =
     [NSString stringWithFormat:@"^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})$"];
@@ -367,35 +366,35 @@
     return NO;
 }
 
-- (BOOL)wya_isMacAddress
+- (BOOL)ll_isMacAddress
 {
     NSString * macAddRegex = @"([A-Fa-f\\d]{2}:){5}[A-Fa-f\\d]{2}";
     NSPredicate * pre      = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", macAddRegex];
     return [pre evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidUrl
+- (BOOL)ll_isValidUrl
 {
     NSString * regex  = @"^((http)|(https))+:[^\\s]+\\.[^\\s]*$";
     NSPredicate * pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pre evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidPostalcode
+- (BOOL)ll_isValidPostalcode
 {
     NSString * postalRegex = @"^[0-8]\\d{5}(?!\\d)$";
     NSPredicate * pre      = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", postalRegex];
     return [pre evaluateWithObject:self];
 }
 
-- (BOOL)wya_isValidTaxNo
+- (BOOL)ll_isValidTaxNo
 {
     NSString * taxNoRegex = @"[0-9]\\d{13}([0-9]|X)$";
     NSPredicate * pre     = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", taxNoRegex];
     return [pre evaluateWithObject:self];
 }
 
-- (BOOL)wya_isOnlyNumber
+- (BOOL)ll_isOnlyNumber
 {
     BOOL res                = YES;
     NSCharacterSet * tmpSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
@@ -416,7 +415,7 @@
 @end
 
 @implementation NSString (UTF8)
-- (BOOL)wya_isContainChineseInUTF8CodeingFormat
+- (BOOL)ll_isContainChineseInUTF8CodeingFormat
 {
     NSUInteger length = [self length];
     for (NSUInteger i = 0; i < length; i++) {
@@ -432,7 +431,7 @@
 @end
 
 @implementation NSString (GBK)
-- (BOOL)wya_isContainChineseInGBKCodeingFormat
+- (BOOL)ll_isContainChineseInGBKCodeingFormat
 {
     for (int i = 0; i < self.length; i++) {
         unichar ch = [self characterAtIndex:i];
@@ -443,7 +442,7 @@
     return NO;
 }
 
-- (NSInteger)wya_chineseCountOfStringInGBKCodeingFormat
+- (NSInteger)ll_chineseCountOfStringInGBKCodeingFormat
 {
     int ChineseCount = 0;
 

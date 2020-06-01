@@ -1,6 +1,5 @@
 //
 //  NSString+Predicate.h
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -19,68 +18,68 @@
 
  @return YES or NO
  */
-- (BOOL)wya_isValidMobileNumber;
+- (BOOL)ll_isValidMobileNumber;
 
 /**
  是否是由字母数字下划线中文组成2位到8位
 
  @return YES or NO
  */
-- (BOOL)wya_isValidRealName;
+- (BOOL)ll_isValidRealName;
 
 /**
  是否只有中文
 
  @return YES or NO
  */
-- (BOOL)wya_isOnlyChinese;
+- (BOOL)ll_isOnlyChinese;
 
 /**
  有效的验证码(根据需求进行位数修改)这里是4位
 
  */
-- (BOOL)wya_isValidVerifyCode;
+- (BOOL)ll_isValidVerifyCode;
 
 /**
  有效的银行卡号
 
  */
-- (BOOL)wya_isValidBankCardNumber;
+- (BOOL)ll_isValidBankCardNumber;
 
 /**
  有效的邮箱
 
  */
-- (BOOL)wya_isValidEmail;
+- (BOOL)ll_isValidEmail;
 
 /**
  有效的字母数字密码
  */
-- (BOOL)wya_isValidAlphaNumberPassword;
+- (BOOL)ll_isValidAlphaNumberPassword;
 
 /**
  检测有效身份证 15位
  */
-- (BOOL)wya_isValidIdentifyFifteen;
+- (BOOL)ll_isValidIdentifyFifteen;
 
 /**
  检测有效身份证 18位
  */
-- (BOOL)wya_isValidIdentifyEighteen;
+- (BOOL)ll_isValidIdentifyEighteen;
 
 /**
  车牌号的有效性
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_isCarNumber;
+- (BOOL)ll_isCarNumber;
 
 /**
  简单的身份证有效性
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_simpleVerifyIdentityCardNum;
+- (BOOL)ll_simpleVerifyIdentityCardNum;
 
 /**
  精确的身份证号码有效性检测
@@ -88,54 +87,54 @@
  @param value 精确的身份证号码有效性检测
  @return yes 有效  no 无效
  */
-+ (BOOL)wya_accurateVerifyIDCardNumber:(NSString *)value;
++ (BOOL)ll_accurateVerifyIDCardNumber:(NSString *)value;
 
 /**
  银行卡的有效性
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_bankCardluhmCheck;
+- (BOOL)ll_bankCardluhmCheck;
 
 /**
  IP地址有效性
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_isIPAddress;
+- (BOOL)ll_isIPAddress;
 
 /**
  Mac地址有效性
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_isMacAddress;
+- (BOOL)ll_isMacAddress;
 
 /**
  网址有效性
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_isValidUrl;
+- (BOOL)ll_isValidUrl;
 
 /**
  邮政编码
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_isValidPostalcode;
+- (BOOL)ll_isValidPostalcode;
 
 /**
  工商税号
 
  @return yes 有效  no 无效
  */
-- (BOOL)wya_isValidTaxNo;
+- (BOOL)ll_isValidTaxNo;
 
 /**
  限制只能输入数字
  */
-- (BOOL)wya_isOnlyNumber;
+- (BOOL)ll_isOnlyNumber;
 @end
 
 @interface NSString (UTF8)
@@ -144,7 +143,7 @@
 
  @return bool
  */
-- (BOOL)wya_isContainChineseInUTF8CodeingFormat;
+- (BOOL)ll_isContainChineseInUTF8CodeingFormat;
 @end
 
 @interface NSString (GBK)
@@ -153,14 +152,14 @@
 
  @return bool
  */
-- (BOOL)wya_isContainChineseInGBKCodeingFormat;
+- (BOOL)ll_isContainChineseInGBKCodeingFormat;
 
 /**
  在gbk环境下计算字符串有多少个汉字
 
  @return 汉字个数
  */
-- (NSInteger)wya_chineseCountOfStringInGBKCodeingFormat;
+- (NSInteger)ll_chineseCountOfStringInGBKCodeingFormat;
 @end
 
 /**

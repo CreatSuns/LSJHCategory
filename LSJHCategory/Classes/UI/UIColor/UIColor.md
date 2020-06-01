@@ -1,0 +1,104 @@
+### c语言调用
+
+```c
+/**
+ *  功能:通过RGB创建颜色
+ *
+ *  @param red <CGFloat> <范围:0~255.0>
+ *  @param green <CGFloat> <范围:0~255.0>
+ *  @param blue <CGFloat> <范围:0~255.0>
+ *
+ *  @return UIColor
+ *
+ *  example: rgb(173.0,23.0,11.0)
+ */
+UIColor * ll_rgb(CGFloat red, CGFloat green, CGFloat blue);
+
+/**
+ *  功能:通过RGB以及alpha创建颜色
+ *
+ *  @param red <CGFloat> <范围:0~255.0>
+ *  @param green <CGFloat> <范围:0~255.0>
+ *  @param blue <CGFloat> <范围:0~255.0>
+ *  @param alpha <CGFloat> <范围:0~1.0>
+ *
+ *  @return UIColor
+ *
+ *  example: rgbA(173.0,23.0,11.0,0.5)
+ */
+UIColor * ll_rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
+
+```
+
+> Category
+
+- 根据字符串生成颜色
+
+```oc
+/**
+ *  Create a color from a HEX string.
+ *  It supports the following type:
+ *  - #RGB
+ *  - #ARGB
+ *  - #RRGGBB
+ *  - #AARRGGBB
+ *
+ *  @param hexString NSString
+ *
+ *  @return Returns the UIColor instance
+ */
++ (UIColor *)ll_hex:(NSString *)hexString;
+```
+
+- 通过0xffffff的16进制数字创建颜色
+
+```oc
+/**
+ *  通过0xffffff的16进制数字创建颜色
+ *
+ *  @param aRGB 0xffffff
+ *
+ *  @return UIColor
+ */
++ (UIColor *)ll_colorWithRGB:(NSUInteger)aRGB;
+```
+
+- 调节颜色的明亮度
+
+```oc
+/**
+ 调节颜色的明亮度
+
+ @param color 颜色
+ @param delta 明亮度
+ @return color
+ */
++ (UIColor *)ll_colorRGBonvertToHSB:(UIColor *)color withBrighnessDelta:(CGFloat)delta;
+```
+
+- 调整颜色的透明度
+
+```oc
+/**
+ 调整颜色的透明度
+
+ @param color 颜色
+ @param delta 透明度
+ @return color
+ */
++ (UIColor *)ll_colorRGBonvertToHSB:(UIColor *)color withAlphaDelta:(CGFloat)delta;
+```
+
+- 将UIColor对象转换为字符串
+
+```oc
+/**
+ 将UIColor对象转换为字符串
+
+ @param color 需要转换的对象
+ @return 返回字符串
+ */
++ (NSString *)ll_toStrByUIColor:(UIColor *)color;
+```
+
+

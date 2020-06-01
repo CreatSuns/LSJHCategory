@@ -1,6 +1,5 @@
 //
 //  NSString+Restructuring.h
-//  WYAKit
 //
 //  Created by 李世航 on 2019/6/22.
 //
@@ -16,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param phoneNum 电话号码
  @return 135****2262
  */
-+ (NSString *)wya_getSecrectStringWithPhoneNumber:(NSString *)phoneNum;
++ (NSString *)ll_getSecrectStringWithPhoneNumber:(NSString *)phoneNum;
 
 /**
  银行卡号中间8位*显示
@@ -24,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param accountNo 银行卡号
  @return string
  */
-+ (NSString *)wya_getSecrectStringWithAccountNo:(NSString *)accountNo;
++ (NSString *)ll_getSecrectStringWithAccountNo:(NSString *)accountNo;
 
 /**
  转为手机格式，默认为-
@@ -32,35 +31,35 @@ NS_ASSUME_NONNULL_BEGIN
  @param mobile 手机号
  @return 格式化的手机号
  */
-+ (NSString *)wya_stringMobileFormat:(NSString *)mobile;
++ (NSString *)ll_stringMobileFormat:(NSString *)mobile;
 
 /**
  去掉前后空格
 
  @return string
  */
-- (NSString *)wya_trimmedString;
+- (NSString *)ll_trimmedString;
 
 /**
  去除空格
 
  @return string
  */
-- (NSString *)wya_trimmingWhitespace;
+- (NSString *)ll_trimmingWhitespace;
 
 /**
  去除空格与空行
 
  @return string
  */
-- (NSString *)wya_trimmingWhitespaceAndNewlines;
+- (NSString *)ll_trimmingWhitespaceAndNewlines;
 
 /**
  抹除小数末尾的0
 
  @return string
  */
-- (NSString *)wya_removeUnwantedZero;
+- (NSString *)ll_removeUnwantedZero;
 
 /**
  生成随机字符串
@@ -68,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param len 字符串长度
  @return 返回一个随机字符串
  */
-+ (NSString *)wya_randomStringWithLength:(NSInteger)len;
++ (NSString *)ll_randomStringWithLength:(NSInteger)len;
 
 @end
 
@@ -79,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param urlString urlString
  @return 字典
  */
-+ (NSDictionary *)wya_breakupUrlStringFetchParams:(NSString *)urlString;
++ (NSDictionary *)ll_breakupUrlStringFetchParams:(NSString *)urlString;
 @end
 
 NS_ASSUME_NONNULL_END

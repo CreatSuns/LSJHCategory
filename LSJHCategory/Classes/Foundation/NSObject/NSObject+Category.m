@@ -1,6 +1,5 @@
 //
 //  NSObject+Category.m
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/4.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -28,7 +27,7 @@ static char associatedObjectNamesKey;
     return objc_getAssociatedObject(self, @selector(timer));
 }
 
-- (void)wya_countDownTime:(NSUInteger)time
+- (void)ll_countDownTime:(NSUInteger)time
            countDownBlock:(TYNCountDownBlock)countDownBlock
              outTimeBlock:(TYNFinishBlock)finishBlock
 {
@@ -150,33 +149,33 @@ static char associatedObjectNamesKey;
     free(mothList_f);
 }
 
-+ (NSString *)wya_version
++ (NSString *)ll_version
 {
     NSDictionary * infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString * app_Version        = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     return app_Version;
 }
 
-+ (NSInteger)wya_build
++ (NSInteger)ll_build
 {
     NSDictionary * infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString * app_build          = [infoDictionary objectForKey:@"CFBundleVersion"];
     return [app_build integerValue];
 }
 
-+ (NSString *)wya_identifier
++ (NSString *)ll_identifier
 {
     NSDictionary * infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString * bundleIdentifier   = [infoDictionary objectForKey:@"CFBundleIdentifier"];
     return bundleIdentifier;
 }
 
-+ (NSString *)wya_currentLanguage
++ (NSString *)ll_currentLanguage
 {
     return [[NSLocale preferredLanguages] firstObject];
 }
 
-+ (NSString *)wya_deviceModel
++ (NSString *)ll_deviceModel
 {
     struct utsname systemInfo;
     uname(&systemInfo);

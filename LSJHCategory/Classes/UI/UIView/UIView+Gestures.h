@@ -1,15 +1,14 @@
 //
 //  UIView+Gestures.h
-//  WYAKit
 //
 //  Created by 李世航 on 2018/12/11.
 //
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, WYATapGesturesStyle) {
-    WYATapGesturesStyleSingle,
-    WYATapGesturesStyleDouble,
+typedef NS_ENUM(NSInteger, LLTapGesturesStyle) {
+    LLTapGesturesStyleSingle,
+    LLTapGesturesStyleDouble,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param tapStyle 点击类型
  @param handle 回调
  */
-- (void)wya_AddTapGesturesWithTapStyle:(WYATapGesturesStyle)tapStyle
-                             TapHandle:(void (^)(UITapGestureRecognizer * gesture))handle;
+- (void)ll_AddTapGesturesWithTapStyle:(LLTapGesturesStyle)tapStyle
+                            TapHandle:(void (^)(UITapGestureRecognizer * gesture))handle;
 
 /**
  添加长按手势
@@ -31,8 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param duration 长按时间
  @param handle 回调
  */
-- (void)wya_AddLongPressGestureWithDuration:(NSTimeInterval)duration
-                                     Handle:
+- (void)ll_AddLongPressGestureWithDuration:(NSTimeInterval)duration
+                                    Handle:
                                      (void (^)(UILongPressGestureRecognizer * gesture))handle;
 
 /**
@@ -40,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param handle 回调
  */
-- (void)wya_AddPanGestureWithHandle:(void (^)(UIPanGestureRecognizer * gesture))handle;
+- (void)ll_AddPanGestureWithHandle:(void (^)(UIPanGestureRecognizer * gesture))handle;
 
 /**
  添加轻扫手势
@@ -48,22 +47,22 @@ NS_ASSUME_NONNULL_BEGIN
  @param direction 方向
  @param handle 回调
  */
-- (void)wya_AddSwipeGestureWithSwipeDirection:(UISwipeGestureRecognizerDirection)direction
-                                  SwipeHandle:(void (^)(UISwipeGestureRecognizer * gesture))handle;
+- (void)ll_AddSwipeGestureWithSwipeDirection:(UISwipeGestureRecognizerDirection)direction
+                                 SwipeHandle:(void (^)(UISwipeGestureRecognizer * gesture))handle;
 
 /**
  添加旋转手势
 
  @param handle 回调
  */
-- (void)wya_AddRotationGestureWithHandle:(void (^)(UIRotationGestureRecognizer * gesture))handle;
+- (void)ll_AddRotationGestureWithHandle:(void (^)(UIRotationGestureRecognizer * gesture))handle;
 
 /**
  添加捏合手势
 
  @param handle 回调
  */
-- (void)wya_AddPinchGestureWithHandle:(void (^)(UIPinchGestureRecognizer * gesture))handle;
+- (void)ll_AddPinchGestureWithHandle:(void (^)(UIPinchGestureRecognizer * gesture))handle;
 @end
 
 NS_ASSUME_NONNULL_END

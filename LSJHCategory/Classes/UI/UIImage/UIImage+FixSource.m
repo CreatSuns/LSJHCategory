@@ -4,7 +4,7 @@
 @implementation UIImage (FixSource)
 
 /** 按给定的方向旋转图片 */
-- (UIImage *)rotate:(UIImageOrientation)orient
+- (UIImage *)ll_rotate:(UIImageOrientation)orient
 {
     CGRect bnds            = CGRectZero;
     UIImage * copy         = nil;
