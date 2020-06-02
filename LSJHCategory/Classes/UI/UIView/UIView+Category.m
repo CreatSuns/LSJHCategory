@@ -1,6 +1,5 @@
 //
 //  UIView+Category.m
-//  WYAKit
 //
 //  Created by 李世航 on 2019/6/22.
 //
@@ -8,7 +7,7 @@
 #import "UIView+Category.h"
 
 @implementation UIView (Category)
-- (void)wya_addSubViews:(NSArray *)subViews
+- (void)ll_addSubViews:(NSArray *)subViews
 {
     [subViews enumerateObjectsUsingBlock:^(UIView * view, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([view isKindOfClass:[UIView class]]) {

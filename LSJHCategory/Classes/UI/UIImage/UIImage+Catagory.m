@@ -1,5 +1,5 @@
 //
-//  UIImage+WYAImage.m
+//  UIImage+Image.m
 //  QRCodeDemo
 //
 //  Created by 李世航 on 2018/6/13.

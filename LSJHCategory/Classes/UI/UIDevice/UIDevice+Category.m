@@ -1,6 +1,5 @@
 //
 //  UIDevice+Category.m
-//  WYAKit
 //
 //  Created by 李世航 on 2019/6/22.
 //

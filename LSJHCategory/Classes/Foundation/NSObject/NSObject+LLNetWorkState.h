@@ -14,9 +14,9 @@ typedef NS_ENUM(NSUInteger, LLNetWorkStatus) {
     LLNetWorkStatusWIFI,
 };
 
-@interface NSObject (WYANetWorkState)
+@interface NSObject (LLNetWorkState)
 
-- (void)wya_getNetWorkStatus:(void (^)(LLNetWorkStatus status))handle;
+- (void)ll_getNetWorkStatus:(void (^)(LLNetWorkStatus status))handle;
 
 @end
 

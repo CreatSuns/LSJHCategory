@@ -76,4 +76,5 @@
 #import "NSString+Validation.h"
 #import "NSString+LLVersionCompare.h"
 #import "NSString+Restructuring.h"
+#import "NSBundle+Source.h"
 #endif /* LLCategory_h */

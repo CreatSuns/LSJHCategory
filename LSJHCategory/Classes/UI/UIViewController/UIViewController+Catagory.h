@@ -1,6 +1,5 @@
 //
 //  UIViewController+Catagory.h
-//  WYAKit
 //
 //  Created by 李世航 on 2018/12/4.
 //

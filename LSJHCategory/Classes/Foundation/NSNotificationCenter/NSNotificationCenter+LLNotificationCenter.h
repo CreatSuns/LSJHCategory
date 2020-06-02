@@ -2,7 +2,7 @@
 //  NSNotificationCenter+LLNotificationCenter.h
 //
 //  Created by 李世航 on 2019/1/3.
-//  Copyright © 2019 WYATeam. All rights reserved.
+//  Copyright © 2019. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

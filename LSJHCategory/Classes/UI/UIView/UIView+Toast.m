@@ -253,7 +253,6 @@
                 SVGKImage * svgImage       = [SVGKImage imageNamed:imageString inBundle:resource_bundle];
                 image                      = svgImage.UIImage;
             } else {
-                //                image = [SVGKImage imageNamed:imageString];
                 image = [UIImage ll_svgImageName:imageString
                                              size:CGSizeMake(30 * SizeAdapter, 30 * SizeAdapter)];
             }

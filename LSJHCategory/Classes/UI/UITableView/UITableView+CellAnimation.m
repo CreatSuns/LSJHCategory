@@ -1,6 +1,5 @@
 //
 //  UITableView+CellAnimation.m
-//  WYA_iOS_Scaffold
 //
 //  Created by 李俊恒 on 2018/7/6.
 //  Copyright © 2018年 WeiYiAn. All rights reserved.
@@ -9,7 +8,7 @@
 #import "UITableView+CellAnimation.h"
 
 @implementation UITableView (CellAnimation)
-- (void)wya_moveAnimation
+- (void)ll_moveAnimation
 {
     NSArray * cells = self.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -28,7 +27,7 @@
     }
 }
 
-- (void)wya_alphaAnimation
+- (void)ll_alphaAnimation
 {
     NSArray * cells = self.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -44,7 +43,7 @@
     }
 }
 
-- (void)wya_fallAnimation
+- (void)ll_fallAnimation
 {
     NSArray * cells = self.visibleCells;
 
@@ -63,7 +62,7 @@
     }
 }
 
-- (void)wya_shakeAnimation
+- (void)ll_shakeAnimation
 {
     NSArray * cells = self.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -85,7 +84,7 @@
     }
 }
 
-- (void)wya_overTurnAnimation
+- (void)ll_overTurnAnimation
 {
     NSArray * cells = self.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -106,7 +105,7 @@
     }
 }
 
-- (void)wya_toTopAnimation
+- (void)ll_toTopAnimation
 {
     NSArray * cells = self.visibleCells;
 
@@ -125,7 +124,7 @@
     }
 }
 
-- (void)wya_springListAnimation
+- (void)ll_springListAnimation
 {
     NSArray * cells = self.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -149,7 +148,7 @@
     }
 }
 
-- (void)wya_shrinkToTopAnimation
+- (void)ll_shrinkToTopAnimation
 {
     NSArray * cells = self.visibleCells;
     for (int i = 0; i < cells.count; i++) {
@@ -161,7 +160,7 @@
     }
 }
 
-- (void)wya_layDownAnimation
+- (void)ll_layDownAnimation
 {
     NSArray * cells          = self.visibleCells;
     NSMutableArray * rectArr = [[NSMutableArray alloc] init];
@@ -183,7 +182,7 @@
     }
 }
 
-- (void)wya_roteAnimation
+- (void)ll_roteAnimation
 {
     NSArray * cells               = self.visibleCells;
     CABasicAnimation * animation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];

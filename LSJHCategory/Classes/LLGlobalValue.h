@@ -9,7 +9,7 @@
 #define LLGlobalValue_h
 
 // **********************RGBColor*************************
-#define WYA_RGB_COLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define LL_RGB_COLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
 #define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 // 随机色
 #define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
@@ -30,19 +30,19 @@
 //获取设备的物理宽高
 #define ScreenBounds [UIScreen mainScreen].bounds
 
-#define WYAiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define LLiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define RectStatus  [[UIApplication sharedApplication] statusBarFrame]
 
-#define WYAStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define LLStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 
-#define WYANavBarHeight 44.0
+#define LLNavBarHeight 44.0
 
-#define WYATabBarHeight (WYAStatusBarHeight > 20 ? 83 : 49)
+#define LLTabBarHeight (LLStatusBarHeight > 20 ? 83 : 49)
 
-#define WYABottomHeight (WYAStatusBarHeight > 20 ? 34 : 0)
+#define LLBottomHeight (LLStatusBarHeight > 20 ? 34 : 0)
 
-#define WYATopHeight (WYAStatusBarHeight + WYANavBarHeight)
+#define LLTopHeight (LLStatusBarHeight + LLNavBarHeight)
 
 // **********************弱引用强引用*************************
 #define WeakSelf(weakSelf)      __weak __typeof(&*self)    weakSelf  = self;

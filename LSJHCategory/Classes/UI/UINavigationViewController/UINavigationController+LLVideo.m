@@ -1,14 +1,13 @@
 //
-//  UINavigationController+WYAVideo.m
-//  WYAKit_Example
+//  UINavigationController+LLVideo.m
 //
 //  Created by 李世航 on 2018/12/14.
-//  Copyright © 2018 WYATeam. All rights reserved.
+//  Copyright © 2018. All rights reserved.
 //
 
-#import "UINavigationController+WYAVideo.h"
+#import "UINavigationController+LLVideo.h"
 
-@implementation UINavigationController (WYAVideo)
+@implementation UINavigationController (LLVideo)
 
 - (BOOL)shouldAutorotate
 {

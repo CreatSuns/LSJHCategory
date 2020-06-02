@@ -1,9 +1,8 @@
 //
 //  NSNotificationCenter+LLNotificationCenter.m
-//  WYAKit_Example
 //
 //  Created by 李世航 on 2019/1/3.
-//  Copyright © 2019 WYATeam. All rights reserved.
+//  Copyright © 2019. All rights reserved.
 //
 
 #import "NSNotificationCenter+LLNotificationCenter.h"
