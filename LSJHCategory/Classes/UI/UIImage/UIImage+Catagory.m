@@ -128,12 +128,15 @@
 
 + (NSDictionary *)ll_imageInfoWithUrl:(NSString *)urlString
 {
-    NSURL * url             = [NSURL URLWithString:urlString];
-    CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)url, NULL);
-    NSDictionary * imageHeader =
-    (__bridge NSDictionary *)CGImageSourceCopyPropertiesAtIndex(source, 0, NULL);
-    NSLog(@"Image header %@", imageHeader);
-    return imageHeader;
+    CGImageSourceRef imgSrc = CGImageSourceCreateWithURL((__bridge CFURLRef)[NSURL URLWithString:urlString], NULL);
+    if (imgSrc!=nil) {
+        NSDictionary * metaDataDict =  (__bridge NSDictionary *)(CGImageSourceCopyPropertiesAtIndex(imgSrc, 0, nil));
+        // Release imgSrc
+        CFRelease(imgSrc);
+        NSLog(@"Image header %@", metaDataDict);
+        return metaDataDict;
+    }
+    return nil;
 }
 
 + (UIImage *)ll_svgImageName:(NSString *)name size:(CGSize)size

@@ -249,9 +249,10 @@
 				ORGANIZATIONNAME = "1228506851@qq.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = J5265ZP7QT;
+						DevelopmentTeam = 8GW8UY75XW;
 					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = 8GW8UY75XW;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -524,7 +525,7 @@
 			baseConfigurationReference = EB2A8B3CFA6BA444633C0A97 /* Pods-LSJHCategory_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5265ZP7QT;
+				DEVELOPMENT_TEAM = 8GW8UY75XW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LSJHCategory/LSJHCategory-Prefix.pch";
 				INFOPLIST_FILE = "LSJHCategory/LSJHCategory-Info.plist";
@@ -541,7 +542,7 @@
 			baseConfigurationReference = BB6CB1F3DB9CFDD4B5E32417 /* Pods-LSJHCategory_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5265ZP7QT;
+				DEVELOPMENT_TEAM = 8GW8UY75XW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LSJHCategory/LSJHCategory-Prefix.pch";
 				INFOPLIST_FILE = "LSJHCategory/LSJHCategory-Info.plist";
@@ -558,6 +559,7 @@
 			baseConfigurationReference = BFA65884410CF9E7187E0320 /* Pods-LSJHCategory_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8GW8UY75XW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -583,6 +585,7 @@
 			baseConfigurationReference = 19E838B8A7E613FA672B21AE /* Pods-LSJHCategory_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8GW8UY75XW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
