@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSJHCategory'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'A short description of LSJHCategory.'
 
 # This description is used to generate tags and improve search results.
@@ -40,7 +40,7 @@ TODO: Add long description of the pod here.
   s.frameworks = 'UIKit'
   s.prefix_header_file = 'LSJHCategory/Classes/LLGlobal.pch'
 
-  s.dependency 'Masonry'
-  s.dependency 'SVGKit'
-  s.dependency 'YYImage'
+  s.dependency 'Masonry', '1.1.0'
+  s.dependency 'SVGKit', '2.1.1'
+  s.dependency 'YYImage', '1.0.4'
 end
